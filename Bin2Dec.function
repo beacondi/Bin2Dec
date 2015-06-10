@@ -1,0 +1,18 @@
+public String Bin2Dec(String inputAngka){
+        String hasil;
+        int panjangAngka, pangkat, i;
+        int angka;
+        double tmpangka=0;
+        char x;
+        panjangAngka=inputAngka.length();
+        pangkat=panjangAngka-1;
+        for(i=0;i<panjangAngka;i++){
+            x=inputAngka.charAt(i);
+            angka=Integer.valueOf(String.valueOf(x));
+            tmpangka += angka * Math.pow(2, pangkat);
+            pangkat--;
+        }
+        angka=((int) tmpangka);
+        hasil=String.valueOf(angka);
+        return(hasil);
+    }
